@@ -31,6 +31,9 @@
         const opt = document.createElement('option');
         opt.value = tipo;
         opt.textContent = tipo;
+        if (tipo.toLowerCase() === 'dni') {
+          opt.selected = true;
+        }
         select.appendChild(opt);
       });
     }
