@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Buscador de Documentos</title>
+</head>
+<body>
+  <h2>Buscar en la Base de Datos</h2>
+  <form id="search-form">
+    <label>Usuario: <input type="text" id="username" required></label><br>
+    <label>Contraseña: <input type="password" id="password" required></label><br>
+    <label>Tipo de Documento:
+      <select id="tipo_documento"></select>
+    </label><br>
+    <label>Nro. Documento:
+      <input type="text" id="nro_documento">
+    </label><br>
+    <button type="submit">Buscar</button>
+  </form>
+
+  <pre id="result"></pre>
+
+  <script>
+    const API_BASE = 'http://192.168.1.3:5000';
+
+    async function loadTipoDocumentoOptions() {
+      const res = await fetch(`${API_BASE}/tipos`);
+      const tipos = await res.json();
+      const select = document.getElementById('tipo_documento');
+      tipos.forEach(tipo => {
+        const opt = document.createElement('option');
+        opt.value = tipo;
+        opt.textContent = tipo;
+        select.appendChild(opt);
+      });
+    }
+
+    document.getElementById('search-form').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const username = document.getElementById('username').value;
+      const password = document.getElementById('password').value;
+      const tipo = document.getElementById('tipo_documento').value;
+      const nro = document.getElementById('nro_documento').value;
+
+      const res = await fetch(`${API_BASE}/search`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': 'Basic ' + btoa(username + ':' + password)
+        },
+        body: JSON.stringify({ tipo_documento: tipo, nro_documento: nro })
+      });
+
+      const data = await res.json();
+      document.getElementById('result').textContent = JSON.stringify(data, null, 2);
+    });
+
+    loadTipoDocumentoOptions();
+  </script>
+</body>
+</html>
