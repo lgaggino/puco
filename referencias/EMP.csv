@@ -1,0 +1,41 @@
+Campo;Tipo de dato;Longitud;Observaciones;Obligatorio;referencias;detalle
+sin_uso;;;;;;
+codigo_emp;N;6;Según el otorgado por la S.S.SALUD. El código se compone de 6 dígitos, el primero es el Tipo de Entidad, los cuatro siguientes son el Número otorgado por la SSSalud y el último es el dígito verificador.;SI;;"Primer dígito = Tipo entidad: 1=Sociedad comercial; 2=Cooperativa cuyo objeto sea brindar prestaciones de salud total o parcialmente; 3=Mutual cuyo objeto sea brindar prestaciones de salud total o parcialmente; 4=Asociación civil cuyo objeto sea brindar prestaciones de salud total o parcialmente; 5=Fundación cuyo objeto sea brindar prestaciones de salud total o parcialmente; 6=Obra social con planes adherentes, superadores y/o complementarios; 7=Unipersonal; 8=Otro"
+cuil_titular;N;11;;SI;;
+codigo_parentesco;N;2;Según tabla;SI;"0; 1; 2; 3; 4; 5; 6";"00=Titular; 01=Cónyuge; 02=Concubino/a; 03=Hijo/a; 04=Hijo/a del cónyuge; 05=Menor bajo guarda o tutela; 06=Familiar a cargo"
+cuil_beneficiario;N;11;En caso de titular repetir campo N º 4. En caso de familiar, CUIL del familiar.;SI;;
+tipo_documento;AN;2;Según tabla. Para argentinos, solo se aceptará DNI, LE o LC.;SI;"DU; LE; LC; PA; CM; ET;01; 02; 03; 04; 05; 06; 07; 08; 09; 10; 11; 12; 13; 14; 15; 16; 17; 18; 19; 20; 21; 22; 23; 24; 99";"DU=Documento Único; LE=Libreta de Enrolamiento; LC=Libreta Cívica; PA=Pasaporte; CM=Certificado Migratorio; ET=En trámite (recién nacidos)"
+numero_documento;N;8;;SI;;
+nombre_apellido;AN;30;En caso de mujeres casadas el apellido debe ser el de soltera.  Informar de acuerdo con el documento de identidad;SI;;
+sexo;A;1;M: masculino – F: femenino – X: No binario;SI;"F; M; X";"M=Masculino; F=Femenino; X=No binario"
+fecha_nacimiento;D;10;Formato DD/MM/AAAA, donde D es día, M es mes y A es año.;SI;;
+nacionalidad;N;3;Según tabla;SI;;"000=EXTRANJERO DESCONOCIDO; 001=AFGANISTAN; 002=ALBANIA; 003=ALEMANIA; 004=ARGELIA; 006=ANDORRA; 007=ANGOLA; 010=ARABIA SAUDITA; 011=ARMENIA; 012=ARGENTINA; 013=AUSTRALIA; 014=AUSTRIA; 015=BAHAMAS; 016=BAHREIN; 017=BANGLADESH; 018=BARBADOS; 019=BELGICA; 020=BELICE; 021=BENIN; 022=BERMUDAS; 023=BHUTAN; 024=BOLIVIA; 025=BOTSWANA; 026=BRASIL; 027=BRUNEI; 028=BULGARIA; 029=BURMA; 030=BURUNDI; 031=CAMERUN; 032=CANADA; 033=CABO VERDE; 034=CHAD; 036=CHILE; 037=CHINA; 038=CHIPRE; 039=COLOMBIA; 040=CONGO; 041=COREA DEL NORTE; 042=COREA DEL SUR; 043=COSTA RICA; 044=CUBA; 045=DINAMARCA; 046=DOMINICANA; 047=ECUADOR; 048=EGIPTO; 049=EL SALVADOR; 050=EMIRATOS ARABES UNIDOS; 051=ESPAÑA; 052=ESTADOS UNIDOS; 053=ESTONIA; 054=ETIOPIA; 055=FIJI; 056=FILIPINAS; 057=FINLANDIA; 058=FRANCIA; 059=GABON; 060=GAMBIA; 061=GHANA; 062=GRECIA; 063=GRENADA; 064=GROENLANDIA; 065=GUATEMALA; 067=GUINEA; 068=GUINEA ECUATORIAL; 069=GUINEA FRANCESA; 070=GUYANA; 071=HAITI; 072=HOLANDA; 073=HONDURAS; 074=HONG KONG; 075=HUNGRIA; 076=INDIA; 077=INDONESIA; 078=IRAN; 079=IRAQ; 080=IRLANDA; 081=ISLANDIA; 086=ISLAS SALOMON; 088=ISRAEL; 089=ITALIA; 090=JAMAICA; 091=JAPON; 092=JORDANIA; 093=KAMPUCHEA; 094=KENIA; 095=KUWAIT; 096=LAOS; 097=LESOTHO; 098=LETONIA; 099=LIBANO; 100=LIBERIA; 101=LIBIA; 102=LIECHTENSTEIN; 103=LITUANIA; 104=LUXEMBURGO; 106=MADAGASCAR; 107=MALAWI; 108=MALASIA; 109=MALDIVAS; 110=MALI; 111=MALTA; 113=MAURITANIA; 114=MAURICIO; 115=MEXICO; 116=MONACO; 117=MONGOLIA; 118=MOROCCO; 119=MOZAMBIQUE; 121=NEPAL; 122=NICARAGUA; 123=NIGER; 124=NIGERIA; 125=NORUEGA; 127=NUEVA ZELANDIA; 128=OMAN; 129=PAKISTAN; 130=PANAMA; 131=PAPUA; 132=PARAGUAY; 133=PERU; 135=POLONIA; 136=PORTUGAL; 138=QATAR; 139=REINO UNIDO; 140=REPUBLICA CENTRO AFRICANA; 141=REPUBLICA DOMINICANA; 142=RUANDA; 143=RUMANIA; 144=RUSIA; 146=SAMOA OCCIDENTAL; 147=SAN MARINO; 148=SENEGAL; 149=SEYCHELLES; 150=SIERRA LEONA; 151=SINGAPUR; 152=SIRIA; 153=SOMALIA; 154=SRI LANKA; 155=SUDAFRICA; 156=SUDAN; 157=SUECIA; 158=SUIZA; 159=SURINAM; 160=TAIWAN; 161=TANZANIA; 162=THAILANDIA; 163=TOGO; 164=TONGA; 165=TRINIDAD; 166=TUNEZ; 167=TURQUIA; 168=UCRANIA; 169=UGANDA; 170=URUGUAY; 171=VATICANO; 172=VENEZUELA; 173=VIETNAM; 174=YEMEN DEL NORTE; 175=YEMEN DEL SUR; 176=YUGOSLAVIA; 177=ZAIRE; 178=ZAMBIA; 179=ZIMBABWE; 180=ANTIGUA Y BERMUDA; 181=BOSNIA-HERZEGOVINA; 182=COMORAS; 183=ERITREA; 184=GEORGIA; 185=MOLDAVIA; 186=REPUBLICA ESLOVACA; 187=SANTA LUCIA; 188=TAYIKISTAN; 189=USBEKISTAN; 190=AZERBAIYAN; 191=BURKINA FASSO; 192=COSTA DE MARFIL; 193=ESLOVENIA; 194=KAZAJSTAN; 195=REPUBLICA CHECA; 196=SAN CRISTOBAL Y NEVIS; 197=SANTO TOME Y PRINCIPE; 198=TURMENISTAN; 199=VANATU; 200=BIELORRUSIA; 201=CROACIA; 202=EST. FEDERADOS DE MICRONESIA; 203=KURGUISTAN; 204=REP. DE LAS ISLAS MARSHALL"
+calle;AN;20;;SI;;
+puerta;AN;5;;SI;;
+piso;AN;4;;NO;;
+departamento;AN;4;;NO;;
+localidad;AN;30;;SI;;
+codigo_postal;N;4;;SI;;
+id_provincia;N;2;Según Tabla;SI;"01; 02; 03; 04; 05; 06; 07; 08; 09; 10; 11; 12; 13; 14; 15; 16; 17; 18; 19; 20; 21; 22; 23; 24; 99";"01=CAPITAL FEDERAL; 02=BUENOS AIRES; 03=CATAMARCA; 04=CORDOBA; 05=CORRIENTES; 06=ENTRE RIOS; 07=JUJUY; 08=LA RIOJA; 09=MENDOZA; 10=SALTA; 11=SAN JUAN; 12=SAN LUIS; 13=SANTA FE; 14=SANTIAGO DEL ESTERO; 15=TUCUMAN; 16=CHACO; 17=CHUBUT; 18=FORMOSA; 19=LA PAMPA; 20=MISIONES; 21=NEUQUEN; 22=RIO NEGRO; 23=SANTA CRUZ; 24=TIERRA DEL FUEGO; 99=NO IDENTIFICADA"
+fijo;N;20;;NO;;
+celular;N;20;;NO;;
+mail;AN;50;;SI;;
+discapacidad;N;2;;SI;"01; 00";"01=SI; 00=NO"
+preexistente;N;2;;NO REQUERIDO;"01; 00";"01=SI; 00=NO"
+nombre_preexistente;AN;25;Sólo en caso de campo 22 = 01 (SI).;NO REQUERIDO;;
+afiliado;N;25;El número de carnet del usuario;SI;;
+tipo_plan;A;1;P: Parcial – T: Total (Integral). Se considerará “Plan Total (Integral)” aquellos que cumplan como mínimo las prestaciones del Programa Médico Obligatorio (PMO). A su vez, “Plan Parcial” a aquellos incluidos en el artículo 7º de la Ley 26.682 conforme a resolución 1277/2019 – SSSALUD.;SI;"P; T";"P=Parcial; T=Total (Integral)"
+codigo_afiliacion;N;5;Según código de aprobación asignado por la S.S.SALUD en los Planes cargados por la Entidad (total o parcial). Si son Planes NO COMERCIALIZADOS se colocará ‘99999’ o están en PROCESO DE APROBACION POR LA S.S.SALUD, se colocará ‘00000’ (5 ceros);SI;;
+adhesion;N;2;Según Tabla;SI;"02; 03";"02=Directo; 03=Desregulado"
+corporativo;N;2;01-SI. 00-NO.;SI;"01; 00";"01=SI; 00=NO"
+cuit_empleador;N;11;Si  PLAN CORPORATIVO (Campo 28) es 01-SI completar con CUIT de la empresa (con aportes de OS Totales o Parciales);SI;;
+rnos;N;6;Si Modalidad de adhesión (Campo 27) al plan es 03=Desregulados, se debe informar el código de RNOS, por la cual los aportes llegan a la entidad.;SI;;
+copago;N;2;01-SI. 00-NO.;SI;"01; 00";"01=SI; 00=NO"
+valor;N;10.2;Informar en el titular, en el grupo familiar asociado colocar 0(cero).  Se deberá informar el valor total facturado al afiliado titular, SIN IVA.;SI;;
+fecha_alta_entidad;D;10;DD/MM/AAAA;SI;;
+fecha_alta_plan;D;10;DD/MM/AAAA;SI;;
+fecha_actualizacion;D;10;DD/MM/AAAA;SI;;
+movimiento;A;1;Tipo de Movimiento A: Alta;SI;;
+sin_uso_1;;;;;;
+sin_uso_2;;;;;;
+sin_uso_3;;;;;;

@@ -1,0 +1,16 @@
+Campo;Tipo de dato;Longitud;Observaciones;Obligatorio;referencias;detalle
+cuil_beneficiario;N;11;En caso de titular (código de parentesco 0), repetir campo N º 3. En caso de familiar, CUIL del familiar.;SI;;
+tipo_documento;AN;2;Según tabla. Para ciudadanos argentinos, solo se aceptará DNI, LE o LC.;SI;"DU; LE; LC; PA; CM; ET;01; 02; 03; 04; 05; 06; 07; 08; 09; 10; 11; 12; 13; 14; 15; 16; 17; 18; 19; 20; 21; 22; 23; 24; 99";"DU=DOCUMENTO UNICO; LE=LIBRETA DE ENROLAMIENTO; LC=LIBRETA CIVICA; PA=PASAPORTE; CM=CERTIFICADO MIGRATORIO; ET=EN TRAMITE (recién nacidos)"
+numero_documento;N;8;Número de documento del beneficiario.;SI;;
+nombre_apellido;AN;30;Debe dejarse un blanco entre apellidos y nombres, informándose en ese orden. En caso de mujeres casadas el apellido debe ser de soltera.;SI;;
+sexo;A;1;Según tabla;SI;"F; M; X";"F=FEMENINO; M=MASCULINO; X=NO BINARIO"
+fecha_nacimiento;N;8;Formato DDMMAAAA, donde D es día, M es mes y A es año.;SI;;
+tipo_beneficiario;N;2;Según tabla;SI;"0; 1; 2; 3; 4; 5; 6; 7; 8; 9; 10; 11; 12";"0=RELACION DE DEPENDENCIA; 1=PASANTES; 2=JUBILADOS DEL SISTEMA NACIONAL DEL SEGURO DE SALUD; 3=ADHERENTES VOLUNTARIOS; 4=PEQUEÑOS CONTRIBUYENTES – MONOTRIBUTISTAS (LEY 25.865); 5=SERVICIO DOMESTICO (LEY 26.068); 6=JUBILADOS DEL REGISTRO PARA LA ATENCION DE ESPAÑOLES; 7=MONOTRIBUTISTAS EFECTORES SOCIALES; 8=BENEFICIARIOS DE SEGURO DE DESEMPLEO (LEY 24.013); 9=BENEFICIARIOS DE SEGURO DE DESEMPLEO (LEY 25.191) (RENATRE); 10=JUBILADOS Y PENSIONADOS DEL INSTITUTO NACIONAL DE SERVICIOS SOCIALES; 11=JUBILADOS Y PENSIONADOS DE OTROS SISTEMAS; 12=RELACION DE DEPENDENCIA (SIN APORTES Y CONTRIBUCION POR SJP)"
+codigo_parentesco;N;2;Según tabla;SI;"0; 1; 2; 3; 4; 5; 6; 7; 8; 9";"0=Titular; 1=Cónyuge; 2=Concubino/a; 3=Hijo soltero menor de 21 años; 4=Hijo soltero de 21 a 25 años cursando estudios regulares; 5=Hijo del cónyuge soltero menor de 21 años; 6=Hijo del cónyuge soltero de 21 a 25 años cursando estudios; 7=Menor bajo guarda o tutela; 8=Familiar a cargo; 9=Mayor de 25 años discapacitado"
+codigo_postal;AN;8;Completar con ceros a la izquierda.;SI;;
+id_provincia;N;2;Según tabla;SI;"01; 02; 03; 04; 05; 06; 07; 08; 09; 10; 11; 12; 13; 14; 15; 16; 17; 18; 19; 20; 21; 22; 23; 24; 99";"1=CAPITAL FEDERAL; 2=BUENOS AIRES; 3=CATAMARCA; 4=CORDOBA; 5=CORRIENTES; 6=ENTRE RIOS; 7=JUJUY; 8=LA RIOJA; 9=MENDOZA; 10=SALTA; 11=SAN JUAN; 12=SAN LUIS; 13=SANTA FE; 14=SANTIAGO DEL ESTERO; 15=TUCUMAN; 16=CHACO; 17=CHUBUT; 18=FORMOSA; 19=LA PAMPA; 20=MISIONES; 21=NEUQUEN; 22=RIO NEGRO; 23=SANTA CRUZ; 24=TIERRA DEL FUEGO; 99=NO IDENTIFICADA"
+cuil_titular;N;11;;SI;;
+codigo_os;N;6;Según el R.N.O.S. Debe contener el código de la obra social incluido el dígito verificador.;SI;;
+ultimo_aporte;N;6;AAAAMM Período en que se encontró una declaración jurada para el beneficiario para TB 00 y 01 (Relación de Dependencia, Pasante) Si es TB 04, 05, 07 (Monotributista Autónomo, Servicio Doméstico, Monotributista Efector Social) figurará el último período de pago.;NO;;
+cuil_valido;N;1;Resultado de la verificación del CUIL del afiliado- Rangos de 100-300;SI;;
+cuit_empleador;N;11;Ver instrucciones según tipo de beneficiario titular (ver anexo);SI;;
